@@ -1,0 +1,7 @@
+     chrome extension 
+
+1. store the cookies of the website, in the extension. 
+2. So that, anyone using that extension can log in without the credentials. 
+
+ex: We need to log in to Gmail from multiple systems.Generate the cookie once using the login credentials.
+    From the next time, people using the chrome extension can directly login from new system

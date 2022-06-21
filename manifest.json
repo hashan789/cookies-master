@@ -1,0 +1,26 @@
+{
+    "manifest_version" : 2,
+    "name" : "Cookies master",
+    "description" : "Get and store cookies",
+    "version" : "1.0.0",
+    "icons" : {"128":"cookies master.png"},
+    "browser_action" : {
+         "default_icon": "cookies master.png",
+         "default_popup": "cookies master.html"         
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["content.js"]
+        }
+    ],
+    "background" : 
+         {
+            "scripts": ["background.js"]
+        },
+    "web_accessible_resources" : ["inject_script.js"],
+    "externally_connectable": {
+        "matches": ["*://*.example.com/*"]
+      },
+    "permissions" : ["activeTab","tabs","contextMenus"]
+}
